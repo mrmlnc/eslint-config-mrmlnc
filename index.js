@@ -96,7 +96,6 @@ const UNICORN_RULES = {
 			name: 'error'
 		}
 	],
-	'unicorn/consistent-function-scoping': 'error',
 	'unicorn/custom-error-definition': 'error',
 	'unicorn/error-message': 'error',
 	'unicorn/escape-case': 'error',
@@ -129,6 +128,7 @@ const UNICORN_RULES = {
 	'unicorn/prefer-includes': 'error',
 	'unicorn/prefer-spread': 'error',
 	'unicorn/prefer-starts-ends-with': 'error',
+	'unicorn/prefer-string-slice': 'error',
 	'unicorn/prefer-type-error': 'error',
 	'unicorn/prevent-abbreviations': [
 		'error',
@@ -345,9 +345,7 @@ const TYPESCRIPT_ESLINT_RULES = {
 		'error',
 		{
 			vars: 'all',
-			// eslint-disable-next-line unicorn/prevent-abbreviations
 			args: 'after-used',
-			// eslint-disable-next-line unicorn/prevent-abbreviations
 			argsIgnorePattern: '^_',
 			caughtErrors: 'all',
 			caughtErrorsIgnorePattern: '^_$'
@@ -373,7 +371,10 @@ const TYPESCRIPT_ESLINT_RULES = {
 	quotes: 'off',
 	'@typescript-eslint/quotes': [
 		'error',
-		'single'
+		'single',
+		{
+			avoidEscape: true
+		}
 	],
 	'@typescript-eslint/require-array-sort-compare': 'error',
 	'require-await': 'off',
@@ -401,7 +402,13 @@ const TYPESCRIPT_ESLINT_RULES = {
 		'error',
 		{
 			before: false,
-			after: true
+			after: true,
+			overrides: {
+				arrow: {
+					before: true,
+					after: true
+				}
+			}
 		}
 	],
 	'@typescript-eslint/typedef': [
@@ -512,6 +519,7 @@ module.exports = {
 				'mocha'
 			],
 			rules: {
+				'max-nested-callbacks': 'off',
 				'@typescript-eslint/no-magic-numbers': 'off',
 				...MOCHA_RULES
 			}
