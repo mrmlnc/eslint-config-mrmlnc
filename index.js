@@ -18,7 +18,8 @@ const XO_RULES_OVERRIDES = {
 		{
 			exceptAfterSingleLine: true
 		}
-	]
+	],
+	'prefer-destructuring': 'off'
 };
 
 const IMPORT_RULES = {
