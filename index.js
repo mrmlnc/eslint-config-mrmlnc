@@ -286,6 +286,7 @@ const TYPESCRIPT_ESLINT_RULES = {
 	],
 	'no-array-constructor': 'off',
 	'@typescript-eslint/no-array-constructor': 'error',
+	'@typescript-eslint/no-dynamic-delete': 'error',
 	'no-empty-function': 'off',
 	'@typescript-eslint/no-empty-function': 'error',
 	'@typescript-eslint/no-empty-interface': [
@@ -300,8 +301,11 @@ const TYPESCRIPT_ESLINT_RULES = {
 			fixToUnknown: true
 		}
 	],
+	'@typescript-eslint/no-extra-non-null-assertion': 'error',
 	'no-extra-parens': 'off',
 	'@typescript-eslint/no-extra-parens': 'error',
+	'no-extra-semi': 'off',
+	'@typescript-eslint/no-extra-semi': 'error',
 	'@typescript-eslint/no-extraneous-class': 'error',
 	'@typescript-eslint/no-floating-promises': 'error',
 	'@typescript-eslint/no-for-in-array': 'error',
@@ -338,6 +342,7 @@ const TYPESCRIPT_ESLINT_RULES = {
 	'@typescript-eslint/no-non-null-assertion': 'error',
 	'@typescript-eslint/no-require-imports': 'error',
 	'@typescript-eslint/no-this-alias': 'error',
+	'@typescript-eslint/no-throw-literal': 'error',
 	'@typescript-eslint/no-unnecessary-qualifier': 'error',
 	'@typescript-eslint/no-unnecessary-type-arguments': 'error',
 	'@typescript-eslint/no-unnecessary-type-assertion': 'error',
@@ -366,6 +371,14 @@ const TYPESCRIPT_ESLINT_RULES = {
 	'@typescript-eslint/prefer-function-type': 'error',
 	'@typescript-eslint/prefer-includes': 'error',
 	'@typescript-eslint/prefer-namespace-keyword': 'error',
+	'@typescript-eslint/prefer-nullish-coalescing': [
+		'error',
+		{
+			ignoreConditionalTests: true,
+			ignoreMixedLogicalExpressions: true
+		}
+	],
+	'@typescript-eslint/prefer-optional-chain': 'error',
 	'@typescript-eslint/prefer-readonly': 'error',
 	'@typescript-eslint/prefer-regexp-exec': 'error',
 	'@typescript-eslint/prefer-string-starts-ends-with': 'error',
@@ -381,10 +394,23 @@ const TYPESCRIPT_ESLINT_RULES = {
 	'require-await': 'off',
 	'@typescript-eslint/require-await': 'error',
 	'@typescript-eslint/restrict-plus-operands': 'error',
+	'@typescript-eslint/return-await': [
+		'error',
+		'in-try-catch'
+	],
 	semi: 'off',
 	'@typescript-eslint/semi': [
 		'error',
 		'always'
+	],
+	'space-before-function-paren': 'off',
+	'@typescript-eslint/space-before-function-paren': [
+		'error',
+		{
+			anonymous: 'always',
+			named: 'never',
+			asyncArrow: 'always'
+		}
 	],
 	'@typescript-eslint/strict-boolean-expressions': [
 		'error',
