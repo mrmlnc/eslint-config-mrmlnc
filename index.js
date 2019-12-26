@@ -127,9 +127,11 @@ const UNICORN_RULES = {
 	'unicorn/prefer-exponentiation-operator': 'error',
 	'unicorn/prefer-flat-map': 'error',
 	'unicorn/prefer-includes': 'error',
+	'unicorn/prefer-negative-index': 'error',
 	'unicorn/prefer-spread': 'error',
 	'unicorn/prefer-starts-ends-with': 'error',
 	'unicorn/prefer-string-slice': 'error',
+	'unicorn/prefer-trim-start-end': 'error',
 	'unicorn/prefer-type-error': 'error',
 	'unicorn/prevent-abbreviations': [
 		'error',
