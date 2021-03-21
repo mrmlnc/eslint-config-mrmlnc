@@ -11,11 +11,9 @@
   "engines": {
     "node": ">=10.13"
   },
-  "main": "index.js",
+  "main": "./out/bundle.js",
   "files": [
-    "rules/index.js",
-    "rules/eslint.js",
-    "index.js"
+    "./out/bundle.js"
   ],
   "keywords": [
     "eslint",
@@ -30,6 +28,7 @@
     "@types/eslint": "^7.2.7",
     "@types/mocha": "^8.2.2",
     "@types/node": "^10.17.56",
+    "esbuild": "^0.10.2",
     "eslint": "^7.23.0",
     "mocha": "^8.3.2",
     "typescript": "^4.0.3"
@@ -44,10 +43,12 @@
     "eslint-plugin-unicorn": "22.0.0"
   },
   "scripts": {
-    "lint": "eslint \"**/*.js\"",
-    "test": "mocha \"rules/*.spec.js\""
+    "prepack": "npm run build",
+    "build": "esbuild lib/index.js --bundle --platform=node --outfile=out/bundle.js --external:@typescript-eslint/*",
+    "lint": "eslint \"lib/**/*.js\" --cache",
+    "test": "mocha \"lib/**/*.spec.js\""
   },
   "eslintConfig": {
-    "extends": "./index.js"
+    "extends": "./out/bundle.js"
   }
 }
