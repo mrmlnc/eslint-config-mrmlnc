@@ -1,5 +1,6 @@
 module.exports = {
 	eslint: require('./eslint'),
 	mocha: require('./mocha'),
-	node: require('./node')
+	node: require('./node'),
+	import: require('./import')
 };
