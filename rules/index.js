@@ -3,5 +3,6 @@ module.exports = {
 	mocha: require('./mocha'),
 	node: require('./node'),
 	import: require('./import'),
-	unicorn: require('./unicorn')
+	unicorn: require('./unicorn'),
+	typescript: require('./typescript')
 };
