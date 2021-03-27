@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the ESLint configuration file used in [@mrmlnc](https://github.com/mrmlnc) projects. Based on [eslint-config-xo](https://github.com/xojs/eslint-config-xo).
+This is the ESLint configuration file used in [@mrmlnc](https://github.com/mrmlnc) projects.
 
 Uses additional rules from:
 
@@ -29,5 +29,3 @@ Just extend `eslint-config-mrmlnc` in your [ESLint config](https://eslint.org/do
 	"extends": "eslint-config-mrmlnc"
 }
 ```
-
-Don't forget to override any rules if required.
