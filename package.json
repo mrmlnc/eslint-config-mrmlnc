@@ -9,11 +9,11 @@
     "url": "https://mrmlnc.com"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10.13"
   },
-  "main": "index.js",
+  "main": "./out/bundle.js",
   "files": [
-    "index.js"
+    "./out/bundle.js"
   ],
   "keywords": [
     "eslint",
@@ -21,27 +21,33 @@
     "mrmlnc"
   ],
   "peerDependencies": {
-    "eslint": ">=6.8.0",
-    "typescript": ">=3.7.4"
+    "eslint": ">=7.23.0",
+    "typescript": ">=4.2.3"
   },
   "devDependencies": {
-    "@types/node": "^8.10.59",
-    "eslint": "^6.8.0",
-    "typescript": "^3.7.4"
+    "@types/eslint": "^7.2.7",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^10.17.56",
+    "esbuild": "^0.10.2",
+    "eslint": "^7.23.0",
+    "mocha": "^8.3.2",
+    "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.13.0",
-    "@typescript-eslint/parser": "^2.13.0",
-    "eslint-config-xo": "0.27.2",
-    "eslint-plugin-import": "2.19.1",
-    "eslint-plugin-mocha": "6.2.2",
-    "eslint-plugin-node": "10.0.0",
-    "eslint-plugin-unicorn": "15.0.1"
+    "@typescript-eslint/eslint-plugin": "4.19.0",
+    "@typescript-eslint/parser": "4.19.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-mocha": "8.1.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-unicorn": "29.0.0"
   },
   "scripts": {
-    "lint": "eslint index.js"
+    "prepack": "npm run build",
+    "build": "esbuild lib/index.js --bundle --platform=node --outfile=out/bundle.js --external:@typescript-eslint/*",
+    "lint": "eslint \"lib/**/*.js\" --cache",
+    "test": "mocha \"lib/**/*.spec.js\""
   },
   "eslintConfig": {
-    "extends": "./index.js"
+    "extends": "./out/bundle.js"
   }
 }

@@ -1,5 +1,4 @@
 # Logs
-logs/
 *.log
 npm-debug.log*
 
@@ -11,7 +10,7 @@ npm-debug.log*
 node_modules/
 
 # Compiled and temporary files
-.tmp/
+.eslintcache
 out/
 
 # Other files
