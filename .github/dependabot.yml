@@ -1,0 +1,44 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "02:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - mrmlnc
+  assignees:
+  - mrmlnc
+  ignore:
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.21.0
+  - dependency-name: "@typescript-eslint/parser"
+    versions:
+    - 4.21.0
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.35
+    - 14.14.37
+  - dependency-name: eslint-plugin-mocha
+    versions:
+    - 6.3.0
+  - dependency-name: eslint
+    versions:
+    - 7.22.0
+  - dependency-name: eslint-plugin-unicorn
+    versions:
+    - 19.0.1
+  - dependency-name: eslint-config-xo
+    versions:
+    - 0.29.1
+  - dependency-name: typescript
+    versions:
+    - 4.2.3
+  - dependency-name: eslint-plugin-node
+    versions:
+    - 11.1.0
+  - dependency-name: eslint-plugin-import
+    versions:
+    - 2.22.1
