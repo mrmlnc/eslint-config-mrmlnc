@@ -30,7 +30,7 @@
     "@types/node": "^10.17.56",
     "esbuild": "^0.12.9",
     "eslint": "^7.23.0",
-    "mocha": "^8.3.2",
+    "mocha": "^9.0.1",
     "typescript": "^4.2.3"
   },
   "dependencies": {
