@@ -9,10 +9,6 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[{.travis.yml,circle.yml,appveyor.yml,.github/**}]
-indent_style = space
-indent_size = 2
-
-[{npm-shrinkwrap.json,package-lock.json,package.json}]
+[*.{yml,json}]
 indent_style = space
 indent_size = 2
