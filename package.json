@@ -13,7 +13,7 @@
   },
   "main": "./out/bundle.js",
   "files": [
-    "./out/bundle.js"
+    "out"
   ],
   "keywords": [
     "eslint",
