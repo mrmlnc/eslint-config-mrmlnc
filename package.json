@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mrmlnc",
-  "version": "1.1.1",
+  "version": "2.0.1",
   "description": "Just my personal shareable ESLint configuration for easy distribution between my packages",
   "license": "MIT",
   "repository": "mrmlnc/eslint-config-mrmlnc",
