@@ -39,7 +39,7 @@
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-mocha": "10.0.5",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-unicorn": "42.0.0"
+    "eslint-plugin-unicorn": "45.0.0"
   },
   "scripts": {
     "prepack": "npm run build",
