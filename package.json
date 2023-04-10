@@ -31,7 +31,7 @@
     "esbuild": "0.17.14",
     "eslint": "8.37.0",
     "mocha": "10.2.0",
-    "typescript": "5.0.3"
+    "typescript": "5.0.4"
   },
   "dependencies": {
     "-": "^0.0.1",
