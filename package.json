@@ -28,7 +28,7 @@
     "@types/eslint": "8.37.0",
     "@types/mocha": "10.0.1",
     "@types/node": "14.18.42",
-    "esbuild": "0.17.14",
+    "esbuild": "0.17.17",
     "eslint": "8.37.0",
     "mocha": "10.2.0",
     "typescript": "5.0.3"
