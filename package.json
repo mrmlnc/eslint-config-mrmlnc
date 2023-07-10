@@ -27,7 +27,7 @@
   "devDependencies": {
     "@types/eslint": "8.40.2",
     "@types/mocha": "10.0.1",
-    "@types/node": "14.18.42",
+    "@types/node": "20.4.1",
     "esbuild": "0.18.11",
     "eslint": "8.44.0",
     "mocha": "10.2.0",
