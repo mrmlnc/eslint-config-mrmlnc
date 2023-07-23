@@ -26,11 +26,9 @@
   },
   "devDependencies": {
     "@types/eslint": "8.44.0",
-    "@types/mocha": "10.0.1",
     "@types/node": "16.18.39",
     "esbuild": "0.18.16",
     "eslint": "8.45.0",
-    "mocha": "10.2.0",
     "typescript": "5.1.6"
   },
   "dependencies": {
@@ -45,7 +43,7 @@
     "prepack": "npm run build",
     "build": "esbuild lib/index.js --bundle --platform=node --outfile=out/bundle.js --external:@typescript-eslint/*",
     "lint": "eslint \"lib/**/*.js\" --cache",
-    "test": "mocha \"lib/**/*.spec.js\""
+    "test": "node --test ./lib"
   },
   "eslintConfig": {
     "extends": "./out/bundle.js"
