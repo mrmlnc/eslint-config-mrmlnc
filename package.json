@@ -6,7 +6,7 @@
   "repository": "mrmlnc/eslint-config-mrmlnc",
   "author": {
     "name": "Denis Malinochkin",
-    "url": "https://mrmlnc.com"
+    "url": "https://mrmlnc.ru"
   },
   "engines": {
     "node": ">=16.0.0"
