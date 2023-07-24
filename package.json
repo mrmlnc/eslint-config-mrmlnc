@@ -6,14 +6,14 @@
   "repository": "mrmlnc/eslint-config-mrmlnc",
   "author": {
     "name": "Denis Malinochkin",
-    "url": "https://mrmlnc.com"
+    "url": "https://mrmlnc.ru"
   },
   "engines": {
-    "node": "^14.17.0 || >=16.0.0"
+    "node": ">=16.0.0"
   },
   "main": "./out/bundle.js",
   "files": [
-    "out"
+    "./out/bundle.js"
   ],
   "keywords": [
     "eslint",
@@ -21,31 +21,29 @@
     "mrmlnc"
   ],
   "peerDependencies": {
-    "eslint": ">=8.39.0",
-    "typescript": ">=5.0.4"
+    "eslint": ">=8.45.0",
+    "typescript": ">=5.1.6"
   },
   "devDependencies": {
     "@types/eslint": "8.44.0",
-    "@types/mocha": "10.0.1",
-    "@types/node": "14.18.42",
-    "esbuild": "0.18.13",
+    "@types/node": "16.18.39",
+    "esbuild": "0.18.16",
     "eslint": "8.45.0",
-    "mocha": "10.2.0",
     "typescript": "5.1.6"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.60.1",
-    "@typescript-eslint/parser": "5.60.1",
+    "@typescript-eslint/eslint-plugin": "6.1.0",
+    "@typescript-eslint/parser": "6.1.0",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-mocha": "10.1.0",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-unicorn": "46.0.0"
+    "eslint-plugin-unicorn": "48.0.0"
   },
   "scripts": {
     "prepack": "npm run build",
     "build": "esbuild lib/index.js --bundle --platform=node --outfile=out/bundle.js --external:@typescript-eslint/*",
     "lint": "eslint \"lib/**/*.js\" --cache",
-    "test": "mocha \"lib/**/*.spec.js\""
+    "test": "node --test ./lib"
   },
   "eslintConfig": {
     "extends": "./out/bundle.js"
