@@ -28,7 +28,7 @@
     "@types/eslint": "8.56.6",
     "@types/node": "16.18.50",
     "esbuild": "0.20.2",
-    "eslint": "8.57.0",
+    "eslint": "9.0.0",
     "typescript": "5.4.3"
   },
   "dependencies": {
