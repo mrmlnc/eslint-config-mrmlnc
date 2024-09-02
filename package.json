@@ -25,10 +25,10 @@
     "typescript": ">=5.2.2"
   },
   "devDependencies": {
-    "@types/eslint": "8.56.6",
+    "@types/eslint": "9.6.1",
     "@types/node": "16.18.50",
     "esbuild": "0.23.1",
-    "eslint": "8.57.0",
+    "eslint": "9.9.1",
     "typescript": "5.5.4"
   },
   "dependencies": {
