@@ -29,7 +29,7 @@
     "@types/node": "16.18.50",
     "esbuild": "0.22.0",
     "eslint": "8.57.0",
-    "typescript": "5.5.2"
+    "typescript": "5.5.4"
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "1.1.0",
