@@ -3,7 +3,10 @@
   "version": "4.1.1",
   "description": "Just my personal shareable ESLint configuration for easy distribution between my packages",
   "license": "MIT",
-  "repository": "mrmlnc/eslint-config-mrmlnc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrmlnc/eslint-config-mrmlnc.git"
+  },
   "author": {
     "name": "Denis Malinochkin",
     "url": "https://mrmlnc.ru"
