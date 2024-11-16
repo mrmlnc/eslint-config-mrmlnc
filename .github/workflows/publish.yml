@@ -1,0 +1,36 @@
+name: Publish
+
+on: workflow_dispatch
+
+jobs:
+  publish_canary_version:
+    name: Publish canary version
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Setup repository
+        uses: actions/checkout@v4
+      - name: Setup environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com
+      - name: Install dependencies
+        run: npm install
+      - name: Prepare package for publishing
+        run: |
+          cat package.json | jq '.name="@mrmlnc/eslint-config-mrmlnc"' | tee package.json
+      - name: Update package version
+        run: |
+          GIT_COMMIT_SHA=$(git rev-parse HEAD)
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+
+          NEW_VERSION="${PACKAGE_VERSION}-${GIT_COMMIT_SHA}"
+
+          npm version "${NEW_VERSION}" --no-git-tag-version
+      - name: Publish canary version
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
