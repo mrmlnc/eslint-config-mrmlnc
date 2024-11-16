@@ -9,7 +9,7 @@
     "url": "https://mrmlnc.ru"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.18.0"
   },
   "type": "module",
   "main": "./out/bundle.cjs",
