@@ -57,3 +57,5 @@ jobs:
         run: npm run build
       - name: Run Hygiene Checks
         run: npm run lint
+        env:
+          DEBUG: eslint:eslint
