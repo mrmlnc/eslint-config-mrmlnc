@@ -51,6 +51,9 @@
     "_build:esm": "npm run _build:base -- --format=esm --outfile=out/bundle.mjs",
     "build": "npm run _build:cjs && npm run _build:esm",
     "lint": "eslint \"lib/**/*.mjs\" --cache",
-    "test": "node --test \"lib/**/*.spec.mjs\""
+    "test": "node --test \"lib/**/*.spec.mjs\"",
+    "ci:build": "npm run build",
+    "ci:lint": "npm run lint",
+    "ci:test": "npm run test"
   }
 }

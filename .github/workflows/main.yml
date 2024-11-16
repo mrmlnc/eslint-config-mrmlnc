@@ -30,11 +30,11 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Bundle sources
-        run: npm run build
+        run: npm run ci:build
       - name: Run Hygiene Checks
-        run: npm run lint
+        run: npm run ci:lint
       - name: Run unit tests
-        run: npm run test
+        run: npm run ci:test
 
   test:
     name: Test on node@${{ matrix.node_version }}
@@ -54,8 +54,8 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Bundle sources
-        run: npm run build
+        run: npm run ci:build
       - name: Run Hygiene Checks
-        run: npm run lint
+        run: npm run ci:lint
         env:
           DEBUG: eslint:eslint
