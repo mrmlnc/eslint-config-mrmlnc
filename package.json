@@ -3,17 +3,23 @@
   "version": "4.1.1",
   "description": "Just my personal shareable ESLint configuration for easy distribution between my packages",
   "license": "MIT",
-  "repository": "mrmlnc/eslint-config-mrmlnc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrmlnc/eslint-config-mrmlnc.git"
+  },
   "author": {
     "name": "Denis Malinochkin",
     "url": "https://mrmlnc.ru"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.18.0"
   },
-  "main": "./out/bundle.js",
+  "type": "module",
+  "main": "./out/bundle.cjs",
+  "module": "./out/bundle.mjs",
   "files": [
-    "./out/bundle.js"
+    "./out/bundle.cjs",
+    "./out/bundle.mjs"
   ],
   "keywords": [
     "eslint",
@@ -21,32 +27,36 @@
     "mrmlnc"
   ],
   "peerDependencies": {
-    "eslint": ">=8.53.0",
-    "typescript": ">=5.2.2"
+    "eslint": ">=9.14.0",
+    "typescript": ">=5.6.3"
   },
   "devDependencies": {
-    "@types/eslint": "8.56.6",
-    "@types/node": "16.18.50",
-    "esbuild": "0.23.1",
-    "eslint": "8.57.0",
-    "typescript": "5.5.4"
+    "@types/eslint": "9.6.1",
+    "@types/node": "18.19.64",
+    "esbuild": "0.24.0",
+    "eslint": "9.14.0",
+    "typescript": "5.6.3"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin": "1.1.0",
-    "@typescript-eslint/eslint-plugin": "6.10.0",
-    "@typescript-eslint/parser": "6.13.2",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-mocha": "10.2.0",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-unicorn": "49.0.0"
+    "@stylistic/eslint-plugin": "2.10.1",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-mocha": "10.5.0",
+    "eslint-plugin-n": "17.13.2",
+    "eslint-plugin-perfectionist": "3.9.1",
+    "eslint-plugin-unicorn": "56.0.0",
+    "globals": "15.12.0",
+    "typescript-eslint": "8.14.0"
   },
   "scripts": {
     "prepack": "npm run build",
-    "build": "esbuild lib/index.js --bundle --platform=node --outfile=out/bundle.js --external:@typescript-eslint/*",
-    "lint": "eslint \"lib/**/*.js\" --cache",
-    "test": "node --test ./lib"
-  },
-  "eslintConfig": {
-    "extends": "./out/bundle.js"
+    "_build:base": "esbuild lib/index.mjs --bundle --platform=node --packages=external",
+    "_build:cjs": "npm run _build:base -- --format=cjs --outfile=out/bundle.cjs",
+    "_build:esm": "npm run _build:base -- --format=esm --outfile=out/bundle.mjs",
+    "build": "npm run _build:cjs && npm run _build:esm",
+    "lint": "eslint \"lib/**/*.mjs\" --cache",
+    "test": "node --test \"lib/**/*.spec.mjs\"",
+    "ci:build": "npm run build",
+    "ci:lint": "npm run lint",
+    "ci:test": "npm run test"
   }
 }

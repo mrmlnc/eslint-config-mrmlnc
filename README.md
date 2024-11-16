@@ -4,16 +4,6 @@
 
 This is the ESLint configuration file used in [@mrmlnc](https://github.com/mrmlnc) projects.
 
-Uses additional rules from:
-
-* [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)
-* [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import)
-* [`eslint-plugin-mocha`](https://github.com/lo1tuma/eslint-plugin-mocha)
-* [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node)
-* [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn)
-
-Initially, this should work with TS code.
-
 ## Installation
 
 ```sh
@@ -22,10 +12,24 @@ npm install --save-dev eslint-config-mrmlnc
 
 ## Usage
 
-Just extend `eslint-config-mrmlnc` in your [ESLint config](https://eslint.org/docs/user-guide/configuring) file, like so:
+With ES Modules:
 
-```json
-{
-	"extends": "eslint-config-mrmlnc"
-}
+```js
+// ./eslint.config.mjs
+import * as cfg from 'eslint-config-mrmlnc';
+
+export default cfg.build({
+	// The following configurations are enabled by default.
+	// esModuleJavaScript: true,
+	// typescript: true,
+	// mocha: true,
+});
+```
+
+With CommonJS Modules:
+
+```js
+const cfg = require('eslint-config-mrmlnc');
+
+module.exports = cfg.build(/* <options> */);
 ```
