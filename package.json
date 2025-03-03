@@ -35,7 +35,7 @@
     "@types/node": "18.19.64",
     "esbuild": "0.25.0",
     "eslint": "9.14.0",
-    "typescript": "5.7.3"
+    "typescript": "5.8.2"
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "2.13.0",
