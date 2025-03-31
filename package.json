@@ -43,7 +43,7 @@
     "eslint-plugin-mocha": "10.5.0",
     "eslint-plugin-n": "17.15.1",
     "eslint-plugin-perfectionist": "4.9.0",
-    "eslint-plugin-unicorn": "56.0.1",
+    "eslint-plugin-unicorn": "58.0.0",
     "globals": "15.15.0",
     "typescript-eslint": "8.14.0"
   },
