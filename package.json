@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@types/eslint": "9.6.1",
-    "@types/node": "18.19.64",
+    "@types/node": "24.0.13",
     "esbuild": "0.25.4",
     "eslint": "9.14.0",
     "typescript": "5.8.3"
