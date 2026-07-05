@@ -1,8 +1,8 @@
 # :panda_face: eslint-config-mrmlnc
 
-## Introduction
+ESLint flat config for [@mrmlnc](https://github.com/mrmlnc) projects.
 
-This is the ESLint configuration file used in [@mrmlnc](https://github.com/mrmlnc) projects.
+It wraps [`eslint-config-xo`](https://github.com/xojs/eslint-config-xo) and adds a small set of personal rule overrides.
 
 ## Installation
 
@@ -12,24 +12,13 @@ npm install --save-dev eslint-config-mrmlnc
 
 ## Usage
 
-With ES Modules:
-
 ```js
 // ./eslint.config.mjs
 import * as cfg from 'eslint-config-mrmlnc';
 
 export default cfg.build({
-	// The following configurations are enabled by default.
-	// esModuleJavaScript: true,
-	// typescript: true,
-	// mocha: true,
+	// override some rules
 });
 ```
 
-With CommonJS Modules:
-
-```js
-const cfg = require('eslint-config-mrmlnc');
-
-module.exports = cfg.build(/* <options> */);
-```
+`build(options)` accepts the same options as `eslint-config-xo`.
