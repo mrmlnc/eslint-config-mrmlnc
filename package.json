@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mrmlnc",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "description": "Just my personal shareable ESLint configuration for easy distribution between my packages",
   "license": "MIT",
   "repository": {
@@ -39,7 +39,7 @@
     "eslint": "10.6.0"
   },
   "dependencies": {
-    "eslint-config-xo": "0.56.0"
+    "eslint-config-xo": "0.57.0"
   },
   "scripts": {
     "prepack": "npm run build",
