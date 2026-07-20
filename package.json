@@ -39,7 +39,7 @@
     "eslint": "10.7.0"
   },
   "dependencies": {
-    "eslint-config-xo": "0.57.0"
+    "eslint-config-xo": "0.58.1"
   },
   "scripts": {
     "prepack": "npm run build",
