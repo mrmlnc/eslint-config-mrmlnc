@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "esbuild": "0.28.2",
-    "eslint": "10.10.0"
+    "eslint": "10.11.0"
   },
   "dependencies": {
     "eslint-config-xo": "2.0.0"
